@@ -47,6 +47,11 @@ img {
     opacity: 0.8;
     position: fixed;
     top: 0px;
+    transition: 0.5s;
+}
+
+.navbar.top {
+background: transparent;
 }
 
 .navbar a {
@@ -108,6 +113,11 @@ img {
     z-index: 10;
 }
 
+
+.hero.blog {
+    background: url('../images/home/blog.jpg') no-repeat center center/cover;
+    height: 30vh;
+}
 /* Icons */
 .icons {
     padding: 30px;
@@ -161,6 +171,28 @@ img {
     outline-color: #28a745;
 }
 
+.post {
+    padding: 50px 30px;
+}
+
+.post h2 {
+    font-size: 40px;
+    padding-bottom: 10px;
+    margin-bottom: 20px;
+    border-bottom: 1px solid #ccc;
+}
+
+.post .meta {
+    margin-bottom: 30px;
+}
+
+.post img {
+    width: 30%;
+    border-radius: 50%;
+    display: block;
+    margin: 0 auto 30px;
+}
+
 /* footer */
 footer {
     display: flex;
@@ -178,4 +210,31 @@ footer a {
 
 footer a:hover {
     color: #28a745;
+}
+
+/* Mobile css */
+@media(max-width: 768px){
+    .navbar{
+        flex-direction: column;
+        height: 120px;
+        padding: 20px;
+    }
+
+    .navbar a {
+        padding: 10px 10px;
+        margin: 0 3px;
+    }
+
+    .flex-items {
+        flex-direction: column;
+    }
+
+    .flex-column.column,
+    .flex-grid.column {
+        flex: 100%;
+        max-width: 100%;
+    }
+    .team img {
+        width: 70%;
+    }
 }

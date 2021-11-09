@@ -1,0 +1,83 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.13.0/css/all.min.css"
+      integrity="sha256-h20CPZ0QyXlBuAw7A+KluUYx/3pK+c7lYEpqLTlxjYQ="
+      crossorigin="anonymous"
+    />
+    <link rel="stylesheet" href="css/lightbox.min.css" />
+    <link rel="stylesheet" href="css/main.css">
+    <link rel="stylesheet" href="css/utility.css">
+    <title>Post One</title>
+</head>
+<body>
+    <header class="hero blog">
+        <div id="navbar" class="navbar top">
+            <h1 class="logo">
+                <span class="text-primary">
+                    <i class="fas fa-book-open"></i>Edge
+                </span>Ledger
+            </h1>
+            <nav>
+                <ul>
+                    <li><a href="index.html">Home</a></li>
+                    <li><a href="index.html#about">About</a></li>
+                    <li><a href="index.html#case">Case</a></li>
+                    <li><a href="index.html#blog">Blog</a></li>
+                    <li><a href="index.html#contact">Contact</a></li>
+                </ul>
+            </nav>
+        </div>
+
+        <div class="content">
+            <h1>Blog</h1>
+        </div>
+    </header>
+    <main>
+       <section class="post">
+            <h2>Blog Post One</h2>
+            <p class="meta">
+                <i class="fas fa-user"></i> Posted by <strong>John Doe</strong> | April 19 2020
+            </p>
+            <img src="images/blog/blog1.jpg" alt="">
+              <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Alias illum, animi earum ea amet sequi reiciendis sit corporis sunt iusto cupiditate odio maxime adipisci cumque eligendi nemo dolore id itaque?</p> 
+              <p>Lorem ipsum dolor sit, amet consectetur adipisicing elit. Neque cum cupiditate quam quis qui repellendus laboriosam, voluptas, dolores adipisci molestiae sint expedita illum, voluptates id dicta. Dolor esse veniam vitae tenetur enim quas laborum officia saepe obcaecati quidem atque similique, maxime quam eum, deleniti fugiat blanditiis totam natus, sapiente necessitatibus? Natus atque ducimus cumque tempore quam a, alias recusandae mollitia.</p>
+              <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Unde doloremque nisi velit ipsa error suscipit, nulla iste sit reiciendis, alias, enim eos similique exercitationem recusandae fugit veniam eaque iusto. Necessitatibus, nesciunt? Optio, accusantium unde corrupti ad deserunt odit delectus autem.</p>
+       </section>
+    </main>
+    <footer class="bg-dark">
+        <div class="social">
+            <a href="#"><i class="fab fa-facebook fa-2x"></i></a>
+            <a href="#"><i class="fab fa-linkedin fa-2x"></i></a>
+            <a href="#"><i class="fab fa-twitter fa-2x"></i></a>
+            <a href="#"><i class="fab fa-youtube "></i></a>
+            <p>Copyright &copy; 2021 - Edge Ledger</p>
+        </div>
+    </footer>
+    <script>
+         const navbar = document.getElementById('navbar');
+      let scrolled = false;
+
+      window.onscroll = function () {
+        if (window.pageYOffset > 100) {
+          navbar.classList.remove('top');
+          if (!scrolled) {
+            navbar.style.transform = 'translateY(-70px)';
+          }
+          setTimeout(function () {
+            navbar.style.transform = 'translateY(0)';
+            scrolled = true;
+          }, 200);
+        } else {
+          navbar.classList.add('top');
+          scrolled = false;
+        }
+      };
+    </script>
+</body>
+</html>
